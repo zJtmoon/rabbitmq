@@ -10,13 +10,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 class RabbitmqApplicationTests {
-//    @Autowired
-//    private PaymentNotifySender sender;
+    @Autowired
+    private PaymentNotifySender sender;
 
-//    @Test
-//    public void test_sender() {
-//        sender.sender("支付订单号："+System.currentTimeMillis());
-//    }
+    @Test
+    public void test_sender() {
+        System.out.println("======");
+        sender.sender("支付订单号："+System.currentTimeMillis());
+    }
     @Test
     void contextLoads() {
         System.out.println("====");
