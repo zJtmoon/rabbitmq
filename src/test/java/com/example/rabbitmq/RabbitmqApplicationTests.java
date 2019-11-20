@@ -1,6 +1,8 @@
 package com.example.rabbitmq;
 
-import com.example.rabbitmq.config.PaymentNotifySender;
+import com.alibaba.fastjson.JSON;
+import com.example.rabbitmq.entity.Order;
+import com.example.rabbitmq.service.OredrSender;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,13 +12,18 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 class RabbitmqApplicationTests {
+//
     @Autowired
-    private PaymentNotifySender sender;
-
+    private OredrSender oredrSender;
     @Test
-    public void test_sender() {
-        System.out.println("======");
-        sender.sender("支付订单号："+System.currentTimeMillis());
+    public  void testSend1(){
+        Order order=new Order();
+        order.setId("1");
+        order.setName("测试订单1");
+        order.setMessageId(System.currentTimeMillis()+"");
+        String s= JSON.toJSONString(order);
+        oredrSender.sendOrder(s);
+
     }
     @Test
     void contextLoads() {

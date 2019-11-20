@@ -86,11 +86,11 @@
 <!--&lt;!&ndash;            <artifactId>spring-data-redis</artifactId>&ndash;&gt;-->
 <!--&lt;!&ndash;            <version>2.0.11.RELEASE</version>&ndash;&gt;-->
 <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba</groupId>-->
-<!--            <artifactId>fastjson</artifactId>-->
-<!--            <version>1.2.59</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.59</version>
+        </dependency>
 <!--        &lt;!&ndash; MQ &ndash;&gt;-->
 <!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
 <!--&lt;!&ndash;            <groupId>org.springframework.kafka</groupId>&ndash;&gt;-->
